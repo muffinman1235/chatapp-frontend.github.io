@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- justin yu is not him -->
+  <meta charset="UTF-8">
+  <title>Directions for Food Webs Choice Project - Helmes Science Green Class</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+body {font-family: Arial, sans-serif;margin: 0;background: linear-gradient(to right, #e3f2fd, #bbdefb); /* Light blue gradient background */padding: 0;list-style-type: none;border-radius: 10px;}
+/* youre gay */
+footer {background: linear-gradient(to right, #90caf9, #64b5f6);padding: 10px;text-align: center;color: white;border-radius: 10px;margin: 5px;font-size: 20px;font-weight: bold;border: 5px solid #90caf9; /* Lighter blue border */width: 95%;margin-left: auto;margin-right: auto;}
+/* main important stuff */
+#messages {
+  height: 300px;
+  overflow: auto;
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #64b5f6;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}/* marty's being sussy */
+
+/* list items actual messages */
+#messages li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #64b5f6; 
+  width: 70%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  background: #e3f2fd;
+}
+/* mehta the beta */
+.info-butt {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background: #64b5f6; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.2s ease; 
+}
+
+/* raj rathod sucks at baasketball */
+/* short for info button */
+.info-butt:hover {
+  background: #42a5f5;
+}
+
+/* mari's thing */
+.hacking-terminal {
+  border: 2px groove #1e90ff !important; 
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #6a82fb) !important; 
+  color: #d6eaff !important; /* Light blue text */
+  font-size: 1em;
+  font-family: 'Source Code Pro', monospace; 
+  width: 49%;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* top nerd: gryson bae */
+
+/* big daddy niks background */
+.hacker {background: black !important; border: 2px solid green !important;color: green !important; font-family: 'Courier New', Courier, monospace; padding: 10px;font-weight:650;border-radius: 10px;
+}
+
+/* anders ding dong ching chong */
+.notification-toggle {margin: 10px;display: inline-block;border-radius:3px;}
+
+.notification-toggle input {
+  margin-right: 10px; /* extra space for the words */
+}
+
+/* aadya likes ryan everheart 🤫*/
+
+#username {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #64b5f6;
+  border-radius: 6.9px; /* wsg justin*/ 
+  margin-bottom: 10px;
+  font-size: 14px;
+  width: 300px;
+}
+
+
+/* stroke that thing big cuzzo */
+
+#joinRoomButton {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px 10px;
+  background: #64b5f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.2s ease; 
+}
+
+/* stop stealing my source code monke */
+
+#joinRoomButton:hover {
+  background: #42a5f5; 
+}
+
+#messageInput {
+  width: calc(100% - 200px);
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #64b5f6; 
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #64b5f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.2s ease;
+}
+/* someone ask ms helmes if she's gay */
+
+button:hover {
+  background: #42a5f5; 
+}
+
+#roomSection {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 40px auto;
+  border: 1px solid #64b5f6;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* you should be PROUD of who you are and YOu deserve RESPECT and other people should NOT decide what you can do! */
+
+#roomSection h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#roomSection label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#roomSection input[type="text"],
+#roomSection input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #64b5f6;
+  border-radius: 5px;
+}
+
+/* mari and donovan are best friends */
+
+#roomSection button {
+  padding: 10px 20px;
+  margin: 10px;
+  background: #64b5f6; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* all these one liners 😭 */
+#roomSection button:hover {
+  background: #42a5f5; 
+}
+
+</style>
+</head>
+<body>
+
+<a href="../changelog.html"><button class="info-butt">Info</button></a>
+<h1 style="text-align: center; font-family: cursive;">School Chat</h1>
+<!-- raj rathod is curry -->
+<label for="username">Username:</label>
+<input type="text" id="username">
+<button id="joinRoomButton" onclick="scrollToRoomSection()">Join Private Group Chat</button>
+<br>
+<!-- donovan and ella are dating -->
+<div id="messages"></div>
+<input id="messageInput" autocomplete="off" placeholder="Type your message">
+<button onclick="sendMessage()">Send</button>
+
+<label class="notification-toggle">
+  <input type="checkbox" id="notificationToggle"> Enable Notifications
+</label>
+<!-- marty is being sus -->
+
+<div id="roomSection">
+  <h1>Join a Private Group Chat</h1>
+  <h3>Joining a Private Group Chat gives you privacy and others can only join with the correct name and password. If the Group Chat does not exist, a new one will be created.</h3>
+  <label for="roomName">Group Chat Name:</label>
+  <input type="text" id="roomName">
+  <br>
+  <label for="roomPassword">Group Chat Password:</label>
+  <input type="password" id="roomPassword">
+  <br>
+  <button onclick="joinRoom()">Join Group Chat</button>
+  <button onclick="closeRoomSection()">Cancel</button>
+</div>
+<!-- loreli is short -->
+<footer>
+  &copy; 2024 Nicholas Wei. All rights reserved. No part of this program may be copied in any way, shape, or form.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
