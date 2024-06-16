@@ -1,0 +1,82 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #e3f2fd, #bbdefb); /* Light blue gradient background */
+            padding: 0;
+            color: #2a2a2a;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #90caf9, #64b5f6); /* Lighter blue gradient background */
+            color: white;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #64b5f6;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #1e3c72;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #2a2a2a;
+            margin-bottom: 1em;
+        }
+
+        .content-box {
+            background: linear-gradient(to right, #e3f2fd, #bbdefb); /* Light blue gradient */
+            border-left: 5px solid #64b5f6;
+            padding: 15px 20px;
+            margin-bottom: 1em;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #1e88e5;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: linear-gradient(to right, #90caf9, #64b5f6); /* Lighter blue gradient background */
+            padding: 10px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 1em;
+            font-weight: bold;
+        }
