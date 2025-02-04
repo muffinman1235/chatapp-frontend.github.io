@@ -187,3 +187,27 @@ button:hover {
 #roomSection button:hover {
   background: #42a5f5; 
 }
+
+/* Make images smaller and side by side */
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between images */
+}
+
+.image-container button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.image-container img {
+  width: 100px; /* Adjust image size */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
