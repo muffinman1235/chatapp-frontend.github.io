@@ -53,7 +53,7 @@ footer {background: linear-gradient(to right, #90caf9, #64b5f6);padding: 10px;te
   background: linear-gradient(135deg, #ff7e5f, #feb47b, #ffb347) !important; /* Orange-red-yellow gradient background */
   color: #fff5e6 !important; /* Light orange text */
   font-size: 1em;
-  font-family: 'Inconsolata', monospace; /* Monospace font */
+  font-family: FreeMono, monospace;
   width: 49%;
   font-weight: 400;
   padding: 10px;
@@ -68,7 +68,7 @@ footer {background: linear-gradient(to right, #90caf9, #64b5f6);padding: 10px;te
 }
 
 /* anders ding dong ching chong */
-.notification-toggle {margin: 10px;display: inline-block;border-radius:3px;}
+.notification-toggle {margin: 8px;display: inline-block;border-radius:3px;}
 
 .notification-toggle input {
   margin-right: 10px; /* extra space for the words */
