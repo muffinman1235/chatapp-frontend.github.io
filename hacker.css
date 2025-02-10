@@ -1,6 +1,6 @@
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: FreeMono, monospace;
             margin: 0;
             background: linear-gradient(to right, #e3f2fd, #bbdefb); /* Light blue gradient background */
             padding: 0;
@@ -22,6 +22,8 @@
             background: linear-gradient(to right, #90caf9, #64b5f6); /* Lighter blue gradient background */
             color: white;
             border-radius: 10px;
+        font-weight: bold;
+                Font-family: Courier, monospace
         }
 
         h1 {
